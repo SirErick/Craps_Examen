@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 public class MainActivity extends Activity {
     private EditText Caja;
+    public static String NAME="name";
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,9 @@ public class MainActivity extends Activity {
         botonuno.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 String nombre=Caja.getText().toString();
-                SharedPreferences settings = getSharedPreferences("perfil", MODE_PRIVATE);
-                SharedPreferences.Editor editor = settings.edit();
-                editor.putString("nombre",nombre );
-                editor.commit() ;
+
                 Intent i = new Intent(MainActivity.this, DadosActivity.class);
+                i.putExtra(NAME, nombre);
                 startActivity(i);
 
             }

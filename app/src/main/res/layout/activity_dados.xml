@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/uno"
             android:paddingLeft="10dp"
-            android:paddingRight="80dp"
+            android:paddingRight="70dp"
             android:id="@+id/imageView" />
 
         <ImageView
@@ -29,13 +29,43 @@
              />
     </LinearLayout>
 
-
-    <Button
-        android:layout_margin="100dp"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LANZAR"
-        android:onClick="Generar"
-        android:id="@+id/button"
+        android:id="@+id/TextView"
+        android:text=""
+
         android:layout_gravity="center_horizontal" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        android:orientation="horizontal"
+        <Button
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LANZAR"
+            android:onClick="Generar"
+            android:id="@+id/button"
+
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registro Ultimo Juego"
+            android:onClick="Mostrar"
+            android:id="@+id/button2"
+            android:layout_gravity="right" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/imageView3"
+
+        />
 </LinearLayout>
